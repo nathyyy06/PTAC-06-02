@@ -1,7 +1,7 @@
 export default function Footer(){
     return( 
-    <Footer>
+    <footer>
         <p>Desenvolvido por: Nathalia teixeira </p>
-    </Footer>
+    </footer>
     )
 }

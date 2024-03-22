@@ -1,7 +1,7 @@
 export default function Header(){
     return( 
-        <Header>
+        <header>
             <h1>Cabeçalho</h1>
-        </Header>
+        </header>
     )
 }
