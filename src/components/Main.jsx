@@ -18,6 +18,18 @@ export  default function Main (){
      ]);
     };
      console.table(listaContatos)
+     const remover = (id) => {
+      const novalista = listaContatos.filter(
+         (contato, index)=>{
+             if(index !== id){
+                 return contato
+             } else{
+                 return null
+             }
+         }
+      )
+     alert(id);
+ }
     return(
      <main>
         <form action= ""onSubmit={registrar}>
@@ -47,7 +59,13 @@ export  default function Main (){
          {CPF}
          <button>enviar</button>
          </form>
-
+         {listaContatos.map((contato, index) => 
+           <div key={index}>
+              <p>{contato.nomeSalvo}</p>
+              <p>{contato.telefoneSalvo}</p>
+              <button onClick={() => remover(index)}>x</button>
+           </div>
+        )}
      </main>
 
     );
